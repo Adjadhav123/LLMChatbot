@@ -44,7 +44,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Initialize Groq API
-groq_api_key = "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"
+groq_api_key = os.getenv("GROQ_API_KEY")
 if not groq_api_key:
     logger.error("GROQ_API_KEY not found in environment variables")
     raise ValueError("GROQ_API_KEY not found in environment variables")
@@ -237,4 +237,3 @@ if __name__ == '__main__':
     # Disable reloader on Windows to avoid socket error
     use_reloader = False if platform.system() == "Windows" else True
     app.run(debug=True, host='0.0.0.0', port=3000, use_reloader=use_reloader)
-    
