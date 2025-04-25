@@ -237,3 +237,4 @@ if __name__ == '__main__':
     # Disable reloader on Windows to avoid socket error
     use_reloader = False if platform.system() == "Windows" else True
     app.run(debug=True, host='0.0.0.0', port=3000, use_reloader=use_reloader)
+    
