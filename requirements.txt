@@ -14,3 +14,8 @@ wikipedia
 langchain-text-splitters
 langchain-openai
 chromadb
+langchain-ollama
+langchain-groq
+faiss-cpu
+chromadb
+pypdf
